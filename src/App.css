@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .sub-container {
@@ -65,12 +66,30 @@
   gap: 10px;
 }
 
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 90px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /* mobile view */
 @media (max-width: 768px) {
   .sub-container {
     width: 100%;
     margin: 0 10px;
     align-items: center;
-    background: red;
   }
 }

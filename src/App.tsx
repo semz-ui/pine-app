@@ -19,13 +19,19 @@ function App() {
     } catch (error) {
       console.log(error);
     } finally {
-      setLoading(true);
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     getRandomProfile(); // for fetching on first render
   }, []);
+  if (loading)
+    return (
+      <div className="loading">
+        <h1>Loading...</h1>;
+      </div>
+    );
   return (
     <div className="container">
       <div className="sub-container">
@@ -76,7 +82,7 @@ function App() {
           </div>
         </div>
       </div>
-      <button onClick={getRandomProfile}>get data</button>
+      <button onClick={getRandomProfile}>Get Random Profile Data</button>
     </div>
   );
 }
